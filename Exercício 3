@@ -1,0 +1,224 @@
+# Leia o arquivo lista_compras.txt
+# TODO
+f = open("lista_compras.txt", 'r')
+
+# Coloque cada linha num elemento de uma lista chamada itens
+# TODO
+itens = f.readlines()
+
+# Feche o arquivo
+# TODO
+f.close()
+
+# Imprimindo a lista
+print(itens)
+['abacaxi\n', 'cenoura\n', 'pera\n', 'uva\n', 'batata\n', 'cebola\n', 'melancia\n', 'couve\n', 'alface\n', 'acelga\n']
+#Use fatiamento!
+# imprima o primeiro item da lista itens
+## TODO
+print(itens[0])
+abacaxi
+
+# imprima o segundo item da lista itens
+## TODO
+print(itens[1])
+cenoura
+
+# imprima o último elemento da lista itens
+## TODO
+print(itens[-1])
+acelga
+
+# imprima o penúltimo elemento da lista itens
+## TODO
+print(itens[-2])
+alface
+
+# imprima os três primeiros elementos da lista itens
+## TODO
+print(itens[0:3])
+['abacaxi\n', 'cenoura\n', 'pera\n']
+# imprima do 4º (inclusive) ao 6º (inclusive) elementos da lista itens
+## TODO
+print(itens[3:6])
+['uva\n', 'batata\n', 'cebola\n']
+# imprima apenas os 2º, 4º e 6º elementos da lista itens
+## TODO
+print([itens[1], itens[3], itens[5]])
+['cenoura\n', 'uva\n', 'cebola\n']
+# imprima apenas os 5º, 7º e 9º elementos da lista itens
+## TODO
+print([itens[4], itens[6], itens[8]])
+['batata\n', 'melancia\n', 'alface\n']
+# imprima apenas os 4º, 7º e 10º elementos da lista itens
+## TODO
+print([itens[3], itens[6], itens[9]])
+['uva\n', 'melancia\n', 'acelga\n']
+#RANGE
+#Range é um objeto para fazer lista de números. Para construir tal objeto, usa-se a built-in function range.
+# aqui é um exemplo
+r = range(5)
+# qual o tipo de r?
+## TODO
+type(r)
+range
+# imprima r
+## TODO
+print(r)
+range(0, 5)
+# Mude o tipo de r para lista
+## TODO
+
+listrange = list(r)
+type(listrange)
+list
+# imprima novamente r
+## TODO
+print(listrange)
+[0, 1, 2, 3, 4]
+#Exercício
+# usando range imprima a seguinte lista
+# [15,20,25,30]
+## TODO
+
+list(range(15,35,5))
+[15, 20, 25, 30]
+#Exercício
+# usando range imprima a seguinte lista
+# [45,30,15,0,-15]
+## TODO
+
+list(range(45,-30,-15))
+[45, 30, 15, 0, -15]
+
+twitter_post = [{
+  "created_at": "Thu Jun 22 21:00:00 +0000 2017",
+  "id": 877994604561387500,
+  "id_str": "877994604561387520",
+  "text": "Creating a Grocery List Manager Using Angular, Part 1: Add &amp; Display Items https://t.co/xFox78juL1 #Angular",
+  "truncated": False,
+  "entities": {
+    "hashtags": [{
+      "text": "Angular",
+      "indices": [103, 111]
+    }],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": [{
+      "url": "https://t.co/xFox78juL1",
+      "expanded_url": "http://buff.ly/2sr60pf",
+      "display_url": "buff.ly/2sr60pf",
+      "indices": [79, 102]
+    }]
+  },
+  "source": "<a href=\"http://bufferapp.com\" rel=\"nofollow\">Buffer</a>",
+  "user": {
+    "id": 772682964,
+    "id_str": "772682964",
+    "name": "SitePoint JavaScript",
+    "screen_name": "SitePointJS",
+    "location": "Melbourne, Australia",
+    "description": "Keep up with JavaScript tutorials, tips, tricks and articles at SitePoint.",
+    "url": "http://t.co/cCH13gqeUK",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/cCH13gqeUK",
+          "expanded_url": "http://sitepoint.com/javascript",
+          "display_url": "sitepoint.com/javascript",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": False,
+    "followers_count": 2145,
+    "friends_count": 18,
+    "listed_count": 328,
+    "created_at": "Wed Aug 22 02:06:33 +0000 2012",
+    "favourites_count": 57,
+    "utc_offset": 43200,
+    "time_zone": "Wellington",
+  },
+}]
+#Seu objetivo é imprimir a localização do usuário que fez o post acima!
+## TODO
+
+twitter_post[0]['user']['location'] ###NÃO ENTENDI O PQ USOU O [0]
+'Melbourne, Australia'
+#Exercício Google maps
+#Outro serviço muito usado é o Google maps. Quando você passar um endereço, é possível obter diversas informações deste endereço.
+address = {
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1600",
+               "short_name" : "1600",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Amphitheatre Pkwy",
+               "short_name" : "Amphitheatre Pkwy",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Mountain View",
+               "short_name" : "Mountain View",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Santa Clara County",
+               "short_name" : "Santa Clara County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "California",
+               "short_name" : "CA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "94043",
+               "short_name" : "94043",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 37.4224764,
+               "lng" : -122.0842499
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 37.4238253802915,
+                  "lng" : -122.0829009197085
+               },
+               "southwest" : {
+                  "lat" : 37.4211274197085,
+                  "lng" : -122.0855988802915
+               }
+            }
+         },
+         "place_id" : "ChIJ2eUgeAK6j4ARbn5u_wAGqWA",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+# imprima a latitude do endereço acima
+## TODO
+address["results"][0]["geometry"]["location"]["lat"]
+37.4224764
+# imprima a longitude do endereço acima
+## TODO
+address["results"][0]["geometry"]["location"]["lng"]
+-122.0842499
