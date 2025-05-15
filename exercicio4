@@ -1,0 +1,172 @@
+# Peça para o usuário digita um número inteiro de 1 a 10 (ambos inclusos).
+# Guarde esse número na variável number.
+# TODO
+
+# Imprima "PAR" se o número digitado for par e "IMPAR" caso contrário
+# Use if e else
+# Dica, use a operação % (resto da divisão)
+# TODO
+
+
+number = int(input("Digite um número entre 1 e 10: "))
+if number < 1 or number > 10:
+    print("Número fora do intervalo permitido!")
+else:
+    if number % 2 == 0:
+        print("PAR")
+    else:
+        print("IMPAR")
+PAR
+# Você vai fazer um programa para que o usuário tente adivinhar qual número você pensou
+# você pensou no número 15
+
+# Peça para o usuário digita um número inteiro de 1 a 20 (ambos inclusos).
+# Guarde esse número na variável number.
+# TODO
+
+# Imprima "MENOR" se o número digitado for menor que 15
+# Imprima "MAIOR" se o número for maior que 15
+# Imprima "ACERTOU" se o número for exatamente 15
+# Use if, elif e else
+# TODO
+
+
+number = int(input("Digite um número entre 1 e 20: "))
+if number < 1 or number > 20:
+    print("Número fora do intervalo permitido!")
+
+if number < 15:
+    print("MENOR")
+elif number > 15:
+    print("MAIOR")
+else:
+    print("ACERTOU")
+MAIOR
+# Você vai fazer um programa para que o usuário tente adivinhar qual número você pensou
+# O programa deve parar apenas quando ele acertar
+# você pensou no número 15
+
+# Peça para o usuário digita um número inteiro de 1 a 20 (ambos inclusos).
+# Guarde esse número na variável number.
+## TODO
+
+# Imprima "MENOR" se o número digitado for menor que 15
+# Imprima "MAIOR" se o número for maior que 15
+# Imprima "ACERTOU" se o número for exatamente 15
+# Use while, if, elif e else
+# Dica: Não esqueça de pedir novamente um número ao usuário dentro da identação do while
+## TODO
+
+
+numero_secreto = 15
+number = int(input("Tente adivinhar o número (entre 1 e 20): "))
+while number != numero_secreto:
+    if number < numero_secreto:
+        print("MENOR")
+    elif number > numero_secreto:
+        print("MAIOR")
+    number = int(input("Tente novamente: "))
+print("ACERTOU")
+ACERTOU
+#Usando input podemos calcular o fatorial de um número digitado pelo usuário:
+
+n = int(input("Entre com um número inteiro:"))
+result = 1
+for i in range(1,n+1):
+    result = result * i
+print(result)
+1307674368000
+# faça um programa que imprime o fatorial do número inteiro digitado pelo usuário
+# use while!!!! não vale usar for!!!!
+# TODO
+
+
+numero = int(input("Digite um número inteiro para calcular o fatorial: "))
+fatorial = 1
+contador = numero
+while contador > 1:
+    fatorial *= contador
+    contador -= 1
+print(f"O fatorial é {fatorial}")
+O fatorial é 1307674368000
+# Faça uma função que retorne o fatorial de um número inteiro
+# entrada: inteiro -> n
+# saida: inteiro -> fatorial de n
+# TODO
+def fatorial(n):
+    resultado = 1
+    for i in range(2, n + 1):
+        resultado *= i
+    return resultado
+numero = int(input("Digite um número inteiro: "))
+print(f"O fatorial é {fatorial(numero)}")
+O fatorial é 1307674368000
+# Faça uma função que retorne o mdc de dois números inteiros
+# entrada: inteiros -> m, n
+# saida: inteiro -> máximo divisor comum de m e n
+# TODO
+
+def mdc(m, n):
+    while n != 0:
+        m, n = n, m % n
+    return m
+a = int(input("Digite o primeiro número: "))
+b = int(input("Digite o segundo número: "))
+print(f"O MDC é {mdc(a, b)}")
+O MDC é 10
+# leia o arquivo lista_compras.txt
+f = open("lista_compras.txt", "r")
+
+# coloque cada linha num elemento de uma lista chamada itens
+itens = f.readlines()
+
+# feche o arquivo
+f.close()
+print(itens)
+['abacaxi\n', 'cenoura\n', 'pera\n', 'uva\n', 'batata\n', 'cebola\n', 'melancia\n', 'couve\n', 'alface\n', 'acelga\n']
+# crie uma função de nome comecaA que verifica se uma palavra word começa com 'a'
+# entrada: string -> word
+# saida: boolean -> True: se word começa com 'a', False: se word não começa com a
+# TODO
+
+def comecaA(word):
+    return word.startswith('a') or word.startswith('A')
+print(comecaA("amor"))     
+print(comecaA("Amor"))     
+print(comecaA("bola"))     
+True
+True
+False
+# Usando map, aplique a função comecaA na lista itens
+# guarde o resultado numa variável chamada resultado
+# TODO
+resultado = list(map(comecaA, itens))
+print(resultado)
+[True, False, False, False, False, False, False, False, True, True]
+# qual o tipo da variável resultado?
+print(type(resultado))  # Deve mostrar: <class 'list'>
+
+# imprima a variável resultado
+print(resultado)
+
+# conte o número de True's na lista
+print("Número de itens começa com a letra 'a':", resultado.count(True))
+<class 'list'>
+[True, False, False, False, False, False, False, False, True, True]
+Número de itens começa com a letra 'a': 3
+# leia o arquivo numeros.txt
+f = open("numeros.txt", "r")
+
+numbers = [int(linha.strip()) for linha in f]
+f.close()
+print(numbers)
+[25, 36, 10, 48, 59, -15, 26, -26, -15, -1235, -89, 59, 10, 0, 0, 10, -59, 10, 23, 56, -89, -47, 15, 10, 9, 8, 4, 3, -25, 10]
+# quantos números na lista numbers são maiores que 0?
+maiores_que_zero = len([num for num in numbers if num > 0])
+print("Números maiores que 0:", maiores_que_zero)
+
+# quantos números na lista numbers são divisíveis por 3?
+divisiveis_por_3 = len([num for num in numbers if num % 3 == 0])
+print("Números divisíveis por 3:", divisiveis_por_3)
+Números maiores que 0: 19
+Números divisíveis por 3: 9
